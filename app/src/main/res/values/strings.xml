@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">just_java</string>
+    <string name="decrement">-</string>
+    <string name="quantity_number">0</string>
+
+
+</resources>
