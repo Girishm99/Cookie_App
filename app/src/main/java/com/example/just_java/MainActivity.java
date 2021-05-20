@@ -1,4 +1,6 @@
 package com.example.just_java;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -33,6 +35,9 @@ int numberOfCoffees = 0;
 
 
     public void increase_quantity(View view){
+
+        int val = 2;
+        String hello = "Hello owlrd"+val+ "";
 
         numberOfCoffees+=1;
         TextView quantity = (TextView) findViewById(R.id.Quantity_number);
@@ -107,4 +112,6 @@ displayPrice(numberOfCoffees*5);
         numberOfCoffees = 0;
         price_value.setText(" ");
     }
+
+
 }

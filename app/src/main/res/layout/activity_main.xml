@@ -12,8 +12,8 @@
             android:id="@+id/text_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cookies At Door Step"
-            android:textSize="40sp"
+            android:text="Cookies At Your Door Step"
+            android:textSize="35sp"
             android:fontFamily="cursive"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -26,10 +26,9 @@
             />
         <ImageView
             android:id="@+id/cookie_image"
-            android:layout_width="400dp"
-            android:layout_height="350dp"
-
-            android:scaleType="centerCrop"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:scaleType="fitCenter"
             android:layout_margin="50dp"
             app:layout_constraintTop_toBottomOf="@+id/text_heading"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -53,16 +52,16 @@
             android:id="@+id/increment_button"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:backgroundTint="#f8f5f1"
+            android:onClick="increase_quantity"
+            android:stateListAnimator="@android:anim/fade_out"
             android:text="+"
             android:textColor="@color/black"
             android:textSize="30dp"
-            android:layout_marginLeft="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cookie_image"
-            android:onClick="increase_quantity"
-
-            />
+            app:rippleColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/cookie_image" />
 
 
         <TextView
@@ -79,14 +78,16 @@
             android:id="@+id/decrement__button"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
             android:backgroundTint="#f8f5f1"
+            android:onClick="descrease_quantity"
+            android:stateListAnimator="@android:animator/fade_in"
             android:text="@string/decrement"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:layout_marginStart="0dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cookie_image"
-            android:onClick="descrease_quantity"/>
+            app:rippleColor="@android:color/black" />
 
         <TextView
             android:id="@+id/price_text"
@@ -100,13 +101,13 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/price_Setion"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="30dp"
-        >
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_Setion">
 
         <Button
             android:id="@+id/Submit_Order"
@@ -119,7 +120,7 @@
             android:text="Order"
             android:textColor="@color/black"
             android:textSize="30dp"
-
+            app:rippleColor="@android:color/black"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cookie_image" />
 
@@ -127,21 +128,29 @@
             android:id="@+id/reset_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:backgroundTint="#f8f5f1"
+            android:onClick="resetOrder"
+            android:stateListAnimator="@android:anim/fade_out"
             android:text="Reset"
             android:textColor="@color/black"
             android:textSize="30dp"
-            android:layout_marginLeft="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cookie_image"
-            android:onClick="resetOrder"
+            app:rippleColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/cookie_image" />
 
-            />
+        <androidx.constraintlayout.helper.widget.Layer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
-
-
-
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="9dp"
+        android:layout_height="7dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="658dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
